@@ -12,17 +12,17 @@ export default function Header({ title, searchQuery, onSearchChange }) {
           style={styles.input} 
           value={searchQuery}
           onChangeText={onSearchChange}
-          />
+        />
         {searchQuery ? (
           <TouchableOpacity 
             onPress={() => onSearchChange('')}
             style={styles.clearButton}
             hitSlop={{top:10, bottom:10, left:10, right:10}}
           >
-            <Ionicons name="close-circle" size={20} color="gray" />
+            <Ionicons name="close-circle" size={18} color="gray" />
           </TouchableOpacity>
         ) : (
-          <Ionicons name="search" size={20} color="gray" />
+          <Ionicons name="search" size={18} color="gray" />
         )}
       </View>
     </View>
@@ -31,29 +31,33 @@ export default function Header({ title, searchQuery, onSearchChange }) {
 
 const styles = StyleSheet.create({
   header: {
-    padding: 15,
+    paddingVertical: 12, // Reducido de 30
+    paddingHorizontal: 15, // Reducido de 30
     backgroundColor: "white",
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "#e0e0e0", // Color más sutil
   },
   title: {
-    fontSize: 20,
+    fontSize: 18, // Reducido de 20
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 8, // Reducido de 10
+    paddingTop: 0 // Eliminado espacio extra
   },
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#f5f5f5",
-    borderRadius: 10,
+    borderRadius: 8, // Bordes ligeramente más pequeños
     paddingHorizontal: 10,
+    height: 38, // Altura fija más compacta
   },
   input: {
     flex: 1,
-    paddingVertical: 8,
+    paddingVertical: 6, // Reducido de 8
+    fontSize: 14, // Texto ligeramente más pequeño
   },
-  clearButton:{
+  clearButton: {
     marginLeft: 5, 
-    padding: 3
+    padding: 2 // Reducido de 3
   }
 });
