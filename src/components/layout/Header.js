@@ -5,7 +5,6 @@ import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 export default function Header({ title, searchQuery, onSearchChange }) {
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>{title}</Text>
       <View style={styles.searchBar}>
         <TextInput 
           placeholder="Buscar tiendas..." 

@@ -64,7 +64,7 @@ export default function HomeScreen() {
   const ShopCard = ({ shop }) => (
     <TouchableOpacity
       style={[styles.card, { width: CARD_WIDTH }]}
-      onPress={() => navigation.navigate("StoreProfile", { store: shop })}
+      onPress={() => navigation.navigate("StoreScreen", { store: shop })}
     >
       <Image source={{ uri: shop.image }} style={styles.image} />
       <View style={styles.info}>
@@ -87,7 +87,6 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <Header
-            title="Tiendas de Ropa"
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
           />
