@@ -165,7 +165,7 @@ export default function StoreScreen({ route }) {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#e84949ff",
     paddingBottom: 20
   },
    safeArea: {
